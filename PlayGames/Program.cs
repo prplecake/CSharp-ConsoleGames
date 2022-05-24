@@ -1,0 +1,48 @@
+﻿using System;
+using FMinus.ConsoleGames.RockPaperScissors;
+using FMinus.ConsoleGames.ScrabbleScore;
+
+namespace FMinus.ConsoleGames.PlayGames
+{
+    class Program
+    {
+        static void _Scrabble()
+        {
+            while (true)
+            {
+                Console.WriteLine("Enter a word:");
+                var inputString = Console.ReadLine();
+
+                var score = Scrabble.GetScore(inputString);
+
+                Console.WriteLine($"Your score: {score}");
+            }
+        }
+
+        static void _RockPaperScissors()
+        {
+            while (true)
+            {
+                RPS.PlayGame();
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("1: ScrabbleScore");
+            Console.WriteLine("2: RockPaperScissors");
+            Console.WriteLine("Enter your choice.");
+            int choice = Convert.ToInt16(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    _Scrabble();
+                    break;
+                case 2:
+                    _RockPaperScissors();
+                    break;
+            }
+        }
+    }
+}
