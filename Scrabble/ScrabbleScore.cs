@@ -28,7 +28,7 @@ namespace FMinus.ConsoleGames.Scrabble
         /// </summary>
         /// <param name="inputString">The string the calculate the score for.</param>
         /// <returns></returns>
-        public static int GetScore(string inputString)
+        public static int GetScore(string? inputString)
         {
             // Null check the variables
             if (string.IsNullOrEmpty(inputString))
