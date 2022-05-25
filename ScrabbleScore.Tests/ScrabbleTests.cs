@@ -33,10 +33,12 @@ namespace FMinus.ConsoleGames.ScrabbleScore.Tests
             var letterScoreAlphabet = new List<char>();
             var missingLetters = new List<char>();
             Console.WriteLine(fullAlphabet.Count);
+
             // Act
             foreach (KeyValuePair<int, string> keyValuePair in Scrabble.LetterScores)
             {
-                foreach (char letter in keyValuePair.Value.ToArray()) {
+                foreach (char letter in keyValuePair.Value.ToArray())
+                {
                     letterScoreAlphabet = letterScoreAlphabet.Append(letter).ToList();
                 }
             }
@@ -61,4 +63,3 @@ namespace FMinus.ConsoleGames.ScrabbleScore.Tests
         }
     }
 }
-
