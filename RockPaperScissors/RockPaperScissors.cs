@@ -48,7 +48,7 @@ namespace FMinus.ConsoleGames.RockPaperScissors
             while ((userScore < 3) && (opponentScore < 3))
             {
                 string _opponentChoice = OpponentChoice(Randoms());
-                string _userChoice = UserChoice();
+                string _userChoice = UserChoice()!;
 
                 string result = ScoreGame(_opponentChoice, _userChoice);
                 switch (result)
