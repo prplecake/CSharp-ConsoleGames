@@ -24,7 +24,7 @@ namespace FMinus.ConsoleGames.ScrabbleScore
             }
 
             // Convert the scring into an array of letters.
-            List<char> source = new List<char>();
+            List<char> source = new();
             source.AddRange(inputString.ToLower());
 
             int score = 0;
