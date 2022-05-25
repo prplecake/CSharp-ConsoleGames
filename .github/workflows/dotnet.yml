@@ -30,7 +30,11 @@ jobs:
         reporter: dotnet-trx
 
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.os}}
+    name: publish-${{matrix.os}}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
     needs: build
     if: ${{ github.event_name != 'pull_request' }} # don't upload artifacts for PRs
     steps:
@@ -46,5 +50,5 @@ jobs:
     - name: Upload MVC artifact
       uses: actions/upload-artifact@v3
       with:
-        name: ConsoleGames
+        name: ConsoleGames-${{matrix.os}}
         path: PlayGames/bin/Release/net6.0/publish/
