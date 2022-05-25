@@ -4,80 +4,74 @@ using System.Linq;
 
 namespace FMinus.ConsoleGames.RockPaperScissors
 {
+    /// <summary>
+    /// A class implementing the game Rock, Paper, Scissors.
+    /// </summary>
     public class RPS
     {
         private static readonly Random getrandom = new();
-        public static int Randoms()
+        /// <summary>
+        /// Implements a psuedo-random number generator.
+        /// </summary>
+        /// <returns></returns>
+        private static int Randoms()
         {
             lock (getrandom)
             {
                 return getrandom.Next(0, 3);
             }
         }
-        public static string OpponentChoice(int seed)
-        {
-            var what = new Dictionary<int, string>
+        /// <summary>
+        /// Gets the computer's "random" choice.
+        /// </summary>
+        /// <param name="seed">A random integer from 0-2</param>
+        /// <returns></returns>
+        private static string OpponentChoice(int seed)
+            => new Dictionary<int, string>
             {
                 { 0, "rock" },
                 { 1, "paper" },
                 { 2, "scissors" }
-            };
-            return what[seed];
-        }
-        public static string UserChoice()
+            }[seed];
+        /// <summary>
+        /// Gets the user's choice or exits if the choice was invalid.
+        /// </summary>
+        /// <returns>
+        /// A string value of one of: "rock", "paper", or "scissors".
+        /// </returns>
+        private static string UserChoice()
         {
-            var _options = new[] { "rock", "paper", "scissors" };
-            Console.WriteLine("Make a decision (rock, paper, scissors):");
-            var userChoice = Console.ReadLine();
+            string[] _options = new[] { "rock", "paper", "scissors" };
+            Console.Write("Make a decision (rock, paper, scissors): ");
+            string? userChoice = Console.ReadLine();
             if (!_options.Contains(userChoice))
             {
                 Console.WriteLine("Input not found. You lose.");
-                System.Environment.Exit(1);
+                Environment.Exit(1);
             }
-            return userChoice;
+            return userChoice!;
         }
-        public static string ScoreGame(string opponentChoice, string userChoice)
-        {
-            IDictionary<string, Dictionary<string, string>> _matrix = new Dictionary<string, Dictionary<string, string>>
-            {
-                {
-                    "rock",
-                    new Dictionary<string, string> {
-                        { "rock", "tie" },
-                        { "paper", "lose" },
-                        { "scissors", "win" }
-                    }
-                },
-                {
-                    "paper",
-                    new Dictionary<string, string> {
-                        { "rock", "win" },
-                        { "paper", "tie" },
-                        { "scissors", "lose" }
-                    }
-                },
-                {
-                    "scissors",
-                    new Dictionary<string, string> {
-                        { "rock", "lose" },
-                        { "paper", "win" },
-                        { "scissors", "tie" }
-                    }
-                }
-            };
-            var result = _matrix[userChoice][opponentChoice];
-            return result;
-        }
+        /// <summary>
+        /// Returns the score of the RPS match.
+        /// </summary>
+        /// <param name="opponentChoice">Opponent's choice</param>
+        /// <param name="userChoice">User's choice</param>
+        /// <returns></returns>
+        private static string ScoreGame(string opponentChoice, string userChoice)
+            => _scoreMatrix[userChoice][opponentChoice];
+        /// <summary>
+        /// Main game loop
+        /// </summary>
         public static void PlayGame()
         {
-            var userScore = 0;
-            var opponentScore = 0;
+            int userScore = 0;
+            int opponentScore = 0;
             while ((userScore < 3) && (opponentScore < 3))
             {
-                var _opponentChoice = OpponentChoice(Randoms());
-                var _userChoice = UserChoice();
+                string _opponentChoice = OpponentChoice(Randoms());
+                string _userChoice = UserChoice()!;
 
-                var result = ScoreGame(_opponentChoice, _userChoice);
+                string result = ScoreGame(_opponentChoice, _userChoice);
                 switch (result)
                 {
                     case "win":
@@ -103,5 +97,39 @@ namespace FMinus.ConsoleGames.RockPaperScissors
                 Console.WriteLine("I won!");
             }
         }
+        /// <summary>
+        /// A dictionary containing the results of a RPS match
+        /// </summary>
+        private static readonly IDictionary<string, Dictionary<string, string>> _scoreMatrix
+            = new Dictionary<string, Dictionary<string, string>>
+        {
+            {
+                "rock",
+                new Dictionary<string, string>
+                {
+                    { "rock", "tie" },
+                    { "paper", "lose" },
+                    { "scissors", "win" }
+                }
+            },
+            {
+                "paper",
+                new Dictionary<string, string>
+                {
+                    { "rock", "win" },
+                    { "paper", "tie" },
+                    { "scissors", "lose" }
+                }
+            },
+            {
+                "scissors",
+                new Dictionary<string, string>
+                {
+                    { "rock", "lose" },
+                    { "paper", "win" },
+                    { "scissors", "tie" }
+                }
+            }
+        };
     }
 }

@@ -1,13 +1,14 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrabbleScore", "ScrabbleScore\ScrabbleScore.csproj", "{B2F535A5-E015-4450-8874-BEE7E0140085}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scrabble", "Scrabble\Scrabble.csproj", "{B2F535A5-E015-4450-8874-BEE7E0140085}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.csproj", "{A3DA92BE-7A7C-478A-AEF1-2C62BF604F07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.csproj", "{A3DA92BE-7A7C-478A-AEF1-2C62BF604F07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayGames", "PlayGames\PlayGames.csproj", "{FB250216-2533-48B6-88B7-654EF2ACA3B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayGames", "PlayGames\PlayGames.csproj", "{FB250216-2533-48B6-88B7-654EF2ACA3B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrabbleScore.Tests", "ScrabbleScore.Tests\ScrabbleScore.Tests.csproj", "{235EEA96-F6B8-4AB0-8F15-03333D9DF9F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scrabble.Tests", "Scrabble.Tests\Scrabble.Tests.csproj", "{235EEA96-F6B8-4AB0-8F15-03333D9DF9F1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{10A2494E-64AF-42FB-9A3E-2B9F92D78BE9}"
 	ProjectSection(SolutionItems) = preProject
@@ -36,5 +37,11 @@ Global
 		{235EEA96-F6B8-4AB0-8F15-03333D9DF9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{235EEA96-F6B8-4AB0-8F15-03333D9DF9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{235EEA96-F6B8-4AB0-8F15-03333D9DF9F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8384EBF-D921-41BD-A43E-DAAF6CB68C00}
 	EndGlobalSection
 EndGlobal
