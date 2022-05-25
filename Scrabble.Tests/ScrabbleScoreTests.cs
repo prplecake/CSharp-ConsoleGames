@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace FMinus.ConsoleGames.ScrabbleScore.Tests
+namespace FMinus.ConsoleGames.Scrabble.Tests
 {
     [TestClass]
     public class ScrabbleScoreTests
@@ -16,7 +16,7 @@ namespace FMinus.ConsoleGames.ScrabbleScore.Tests
 
             // Act
             int actualResult = 0;
-            foreach (KeyValuePair<int, string> keyValuePair in Scrabble.LetterScores)
+            foreach (KeyValuePair<int, string> keyValuePair in ScrabbleScore._letterScores)
             {
                 actualResult += keyValuePair.Value.Length;
             }
@@ -34,7 +34,7 @@ namespace FMinus.ConsoleGames.ScrabbleScore.Tests
             var missingLetters = new List<char>();
 
             // Act
-            foreach (KeyValuePair<int, string> keyValuePair in Scrabble.LetterScores)
+            foreach (KeyValuePair<int, string> keyValuePair in ScrabbleScore._letterScores)
             {
                 foreach (char letter in keyValuePair.Value.ToArray())
                 {

@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FMinus.ConsoleGames.ScrabbleScore
+namespace FMinus.ConsoleGames.Scrabble
 {
     /// <summary>
     /// A class providing a method to calculate the Scrabble score of a given
     /// string.
     /// </summary>
-    public static class Scrabble
+    public static class ScrabbleScore
     {
         /// <summary>
         /// A dictionary of letter point values as keys with the respective
         /// letters as in a string.
         /// </summary>
-        public readonly static IDictionary<int, string> LetterScores = new Dictionary<int, string>
+        public readonly static IDictionary<int, string> _letterScores = new Dictionary<int, string>
         {
             {1, "aeiolnstur" },
             {2, "dg" },
@@ -43,11 +43,10 @@ namespace FMinus.ConsoleGames.ScrabbleScore
             int score = 0;
             foreach (char c in source)
             {
-                foreach (KeyValuePair<int, string> keyValuePair in LetterScores)
+                foreach (KeyValuePair<int, string> keyValuePair in _letterScores)
                 {
                     if (keyValuePair.Value.Contains(c))
                     {
-                        Console.WriteLine($"{keyValuePair.Key}::{c}");
                         score += keyValuePair.Key;
                     }
 

@@ -1,6 +1,6 @@
 ﻿using System;
 using FMinus.ConsoleGames.RockPaperScissors;
-using FMinus.ConsoleGames.ScrabbleScore;
+using FMinus.ConsoleGames.Scrabble;
 
 namespace FMinus.ConsoleGames.PlayGames
 {
@@ -13,7 +13,7 @@ namespace FMinus.ConsoleGames.PlayGames
                 Console.WriteLine("Enter a word:");
                 var inputString = Console.ReadLine();
 
-                var score = Scrabble.GetScore(inputString);
+                var score = ScrabbleScore.GetScore(inputString);
 
                 Console.WriteLine($"Your score: {score}");
             }
