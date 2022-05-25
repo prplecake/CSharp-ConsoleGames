@@ -32,7 +32,6 @@ namespace FMinus.ConsoleGames.ScrabbleScore.Tests
             var fullAlphabet = Enumerable.Range('a', 26).Select(x => (char)x).ToList();
             var letterScoreAlphabet = new List<char>();
             var missingLetters = new List<char>();
-            Console.WriteLine(fullAlphabet.Count);
 
             // Act
             foreach (KeyValuePair<int, string> keyValuePair in Scrabble.LetterScores)
