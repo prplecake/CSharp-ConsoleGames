@@ -5,8 +5,8 @@ using System.Linq;
 namespace FMinus.ConsoleGames.RockPaperScissors
 {
     public class RPS
-    { 
-        private static readonly Random getrandom = new Random();
+    {
+        private static readonly Random getrandom = new();
         public static int Randoms()
         {
             lock (getrandom)
@@ -23,7 +23,6 @@ namespace FMinus.ConsoleGames.RockPaperScissors
                 { 2, "scissors" }
             };
             return what[seed];
-
         }
         public static string UserChoice()
         {

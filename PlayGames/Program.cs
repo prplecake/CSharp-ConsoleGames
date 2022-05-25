@@ -6,7 +6,7 @@ namespace FMinus.ConsoleGames.PlayGames
 {
     class Program
     {
-        static void _Scrabble()
+        static void PlayScrabble()
         {
             while (true)
             {
@@ -19,7 +19,7 @@ namespace FMinus.ConsoleGames.PlayGames
             }
         }
 
-        static void _RockPaperScissors()
+        static void PlayRockPaperScissors()
         {
             while (true)
             {
@@ -37,10 +37,10 @@ namespace FMinus.ConsoleGames.PlayGames
             switch (choice)
             {
                 case 1:
-                    _Scrabble();
+                    PlayScrabble();
                     break;
                 case 2:
-                    _RockPaperScissors();
+                    PlayRockPaperScissors();
                     break;
             }
         }
