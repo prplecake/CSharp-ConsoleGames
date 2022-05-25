@@ -26,7 +26,7 @@ namespace FMinus.ConsoleGames.RockPaperScissors
         /// </summary>
         /// <param name="seed">A random integer from 0-2</param>
         /// <returns></returns>
-        private static string OpponentChoice(int seed)
+        public static string OpponentChoice(int seed)
             => new Dictionary<int, string>
             {
                 { 0, "rock" },
@@ -57,7 +57,7 @@ namespace FMinus.ConsoleGames.RockPaperScissors
         /// <param name="opponentChoice">Opponent's choice</param>
         /// <param name="userChoice">User's choice</param>
         /// <returns></returns>
-        private static string ScoreGame(string opponentChoice, string userChoice)
+        public static string ScoreGame(string opponentChoice, string userChoice)
             => _scoreMatrix[userChoice][opponentChoice];
         /// <summary>
         /// Main game loop
