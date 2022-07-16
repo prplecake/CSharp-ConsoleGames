@@ -85,7 +85,6 @@ namespace FMinus.ConsoleGames.RockPaperScissors
                         Console.WriteLine("You lose!");
                         opponentScore += 1;
                         break;
-
                 }
             }
             if (userScore > opponentScore)

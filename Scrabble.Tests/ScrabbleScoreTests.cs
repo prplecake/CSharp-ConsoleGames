@@ -58,7 +58,6 @@ namespace FMinus.ConsoleGames.Scrabble.Tests
             // Assert
             Assert.AreEqual(fullAlphabet.Count, 26);
             Assert.AreEqual(fullAlphabet.Count, letterScoreAlphabet.Count);
-
         }
     }
 }

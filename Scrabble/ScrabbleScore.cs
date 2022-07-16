@@ -49,7 +49,6 @@ namespace FMinus.ConsoleGames.Scrabble
                     {
                         score += keyValuePair.Key;
                     }
-
                 }
             }
             return score;
