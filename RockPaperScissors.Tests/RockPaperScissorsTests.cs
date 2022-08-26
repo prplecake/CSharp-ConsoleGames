@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace FMinus.ConsoleGames.RockPaperScissors.Tests;
+namespace ConsoleGames.RockPaperScissors.Tests;
 
 [TestClass]
 public class RockPaperScissorsTests

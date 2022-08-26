@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace FMinus.ConsoleGames.Scrabble
+namespace ConsoleGames.Scrabble
 {
     /// <summary>
     /// A class providing a method to calculate the Scrabble score of a given

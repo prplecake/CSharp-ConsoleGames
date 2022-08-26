@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace FMinus.ConsoleGames.Scrabble.Tests
+namespace ConsoleGames.Scrabble.Tests
 {
     [TestClass]
     public class ScrabbleScoreTests

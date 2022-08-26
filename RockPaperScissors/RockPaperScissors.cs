@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FMinus.ConsoleGames.RockPaperScissors
+namespace ConsoleGames.RockPaperScissors
 {
     /// <summary>
     /// A class implementing the game Rock, Paper, Scissors.

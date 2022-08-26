@@ -1,8 +1,7 @@
 ﻿using System;
-using FMinus.ConsoleGames.RockPaperScissors;
-using FMinus.ConsoleGames.Scrabble;
+using ConsoleGames.Scrabble;
 
-namespace FMinus.ConsoleGames.PlayGames
+namespace ConsoleGames.PlayGames
 {
     class Program
     {
