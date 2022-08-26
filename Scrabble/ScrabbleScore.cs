@@ -12,7 +12,7 @@ namespace ConsoleGames.Scrabble
         /// A dictionary of letter point values as keys with the respective
         /// letters as in a string.
         /// </summary>
-        public readonly static IDictionary<int, string> _letterScores = new Dictionary<int, string>
+        public static readonly IDictionary<int, string> LetterScores = new Dictionary<int, string>
         {
             {1, "aeiolnstur" },
             {2, "dg" },
@@ -42,7 +42,7 @@ namespace ConsoleGames.Scrabble
             int score = 0;
             foreach (char c in source)
             {
-                foreach (KeyValuePair<int, string> keyValuePair in _letterScores)
+                foreach (KeyValuePair<int, string> keyValuePair in LetterScores)
                 {
                     if (keyValuePair.Value.Contains(c))
                     {

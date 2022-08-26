@@ -25,6 +25,7 @@ namespace ConsoleGames.PlayGames
                     break;
             }
         }
+
         /// <summary>
         /// Implements Scrabble.ScrabbleScore
         /// </summary>
@@ -41,6 +42,7 @@ namespace ConsoleGames.PlayGames
                 Console.WriteLine($"Your score: {score}");
             }
         }
+
         /// <summary>
         /// Implements RockPaperScissors.RPS
         /// </summary>
@@ -48,7 +50,7 @@ namespace ConsoleGames.PlayGames
         {
             while (true)
             {
-                RPS.PlayGame();
+                RockPaperScissors.RockPaperScissors.PlayGame();
             }
         }
     }

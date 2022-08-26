@@ -16,7 +16,7 @@ namespace ConsoleGames.Scrabble.Tests
 
             // Act
             int actualResult = 0;
-            foreach (KeyValuePair<int, string> keyValuePair in ScrabbleScore._letterScores)
+            foreach (KeyValuePair<int, string> keyValuePair in ScrabbleScore.LetterScores)
             {
                 actualResult += keyValuePair.Value.Length;
             }
@@ -34,7 +34,7 @@ namespace ConsoleGames.Scrabble.Tests
             var missingLetters = new List<char>();
 
             // Act
-            foreach (KeyValuePair<int, string> keyValuePair in ScrabbleScore._letterScores)
+            foreach (KeyValuePair<int, string> keyValuePair in ScrabbleScore.LetterScores)
             {
                 foreach (char letter in keyValuePair.Value.ToArray())
                 {

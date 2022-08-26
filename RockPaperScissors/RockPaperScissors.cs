@@ -7,18 +7,18 @@ namespace ConsoleGames.RockPaperScissors
     /// <summary>
     /// A class implementing the game Rock, Paper, Scissors.
     /// </summary>
-    public class RPS
+    public static class RockPaperScissors
     {
-        private static readonly Random getrandom = new();
+        private static readonly Random GetRandom = new();
         /// <summary>
         /// Implements a psuedo-random number generator.
         /// </summary>
         /// <returns></returns>
         private static int Randoms()
         {
-            lock (getrandom)
+            lock (GetRandom)
             {
-                return getrandom.Next(0, 3);
+                return GetRandom.Next(0, 3);
             }
         }
         /// <summary>
@@ -41,10 +41,10 @@ namespace ConsoleGames.RockPaperScissors
         /// </returns>
         private static string UserChoice()
         {
-            string[] _options = new[] { "rock", "paper", "scissors" };
+            var options = new[] { "rock", "paper", "scissors" };
             Console.Write("Make a decision (rock, paper, scissors): ");
             string? userChoice = Console.ReadLine();
-            if (!_options.Contains(userChoice))
+            if (!options.Contains(userChoice))
             {
                 Console.WriteLine("Input not found. You lose.");
                 Environment.Exit(1);
@@ -58,7 +58,7 @@ namespace ConsoleGames.RockPaperScissors
         /// <param name="userChoice">User's choice</param>
         /// <returns></returns>
         public static string ScoreGame(string opponentChoice, string userChoice)
-            => _scoreMatrix[userChoice][opponentChoice];
+            => ScoreMatrix[userChoice][opponentChoice];
         /// <summary>
         /// Main game loop
         /// </summary>
@@ -68,10 +68,10 @@ namespace ConsoleGames.RockPaperScissors
             int opponentScore = 0;
             while ((userScore < 3) && (opponentScore < 3))
             {
-                string _opponentChoice = OpponentChoice(Randoms());
-                string _userChoice = UserChoice()!;
+                string opponentChoice = OpponentChoice(Randoms());
+                string userChoice = UserChoice();
 
-                string result = ScoreGame(_opponentChoice, _userChoice);
+                string result = ScoreGame(opponentChoice, userChoice);
                 switch (result)
                 {
                     case "win":
@@ -87,19 +87,13 @@ namespace ConsoleGames.RockPaperScissors
                         break;
                 }
             }
-            if (userScore > opponentScore)
-            {
-                Console.WriteLine("You won!");
-            }
-            else
-            {
-                Console.WriteLine("I won!");
-            }
+
+            Console.WriteLine(userScore > opponentScore ? "You won!" : "I won!");
         }
         /// <summary>
         /// A dictionary containing the results of a RPS match
         /// </summary>
-        private static readonly IDictionary<string, Dictionary<string, string>> _scoreMatrix
+        private static readonly IDictionary<string, Dictionary<string, string>> ScoreMatrix
             = new Dictionary<string, Dictionary<string, string>>
         {
             {
