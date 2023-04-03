@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - uses: actions/cache@v3
       with:
         path: ~/.nuget/packages
@@ -47,7 +47,7 @@ jobs:
     needs: build
     if: ${{ github.event_name != 'pull_request' }} # don't upload artifacts for PRs
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0
     - uses: actions/cache@v3
