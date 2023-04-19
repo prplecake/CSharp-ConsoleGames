@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace ConsoleGames.RockPaperScissors
+﻿namespace ConsoleGames.RockPaperScissors
 {
     /// <summary>
     /// A class implementing the game Rock, Paper, Scissors.

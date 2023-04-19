@@ -1,5 +1,4 @@
-﻿using System;
-using ConsoleGames.Scrabble;
+﻿using ConsoleGames.Scrabble;
 
 namespace ConsoleGames.PlayGames
 {
