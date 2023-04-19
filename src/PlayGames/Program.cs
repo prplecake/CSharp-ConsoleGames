@@ -1,4 +1,5 @@
-﻿using ConsoleGames.Scrabble;
+﻿using ConsoleGames.RockPaperScissors;
+using ConsoleGames.Scrabble;
 
 namespace ConsoleGames.PlayGames;
 
@@ -49,7 +50,7 @@ class Program
     {
         while (true)
         {
-            RockPaperScissors.RockPaperScissors.PlayGame();
+            RPS.PlayGame();
         }
     }
 }
