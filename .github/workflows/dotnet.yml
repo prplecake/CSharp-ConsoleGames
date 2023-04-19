@@ -60,10 +60,10 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    - name: Publish MVC
-      run: dotnet publish PlayGames/PlayGames.csproj -c Release
+    - name: Publish
+      run: dotnet publish src/PlayGames/PlayGames.csproj -c Release
     - name: Upload MVC artifact
       uses: actions/upload-artifact@v3
       with:
         name: ConsoleGames-${{matrix.os}}
-        path: PlayGames/bin/Release/net6.0/publish/
+        path: src/PlayGames/bin/Release/net6.0/publish/
