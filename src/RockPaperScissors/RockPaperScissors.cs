@@ -3,7 +3,7 @@
 /// <summary>
 /// A class implementing the game Rock, Paper, Scissors.
 /// </summary>
-public static class RockPaperScissors
+public static class RPS
 {
     private static readonly Random GetRandom = new();
     /// <summary>

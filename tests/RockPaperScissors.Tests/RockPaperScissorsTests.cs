@@ -15,7 +15,7 @@ public class RockPaperScissorsTests
         List<bool> results = new();
         for (int i = 0; i < 3; i++)
         {
-            results.Add(okResults.Contains(RockPaperScissors.OpponentChoice(i)));
+            results.Add(okResults.Contains(RPS.OpponentChoice(i)));
         }
 
         // Assert
@@ -32,16 +32,16 @@ public class RockPaperScissorsTests
         string s = "scissors";
 
         // Assert
-        Assert.AreEqual("tie", RockPaperScissors.ScoreGame(r, r));
-        Assert.AreEqual("win", RockPaperScissors.ScoreGame(s, r));
-        Assert.AreEqual("lose", RockPaperScissors.ScoreGame(p, r));
+        Assert.AreEqual("tie", RPS.ScoreGame(r, r));
+        Assert.AreEqual("win", RPS.ScoreGame(s, r));
+        Assert.AreEqual("lose", RPS.ScoreGame(p, r));
 
-        Assert.AreEqual("tie", RockPaperScissors.ScoreGame(p, p));
-        Assert.AreEqual("lose", RockPaperScissors.ScoreGame(p, r));
-        Assert.AreEqual("win", RockPaperScissors.ScoreGame(p, s));
+        Assert.AreEqual("tie", RPS.ScoreGame(p, p));
+        Assert.AreEqual("lose", RPS.ScoreGame(p, r));
+        Assert.AreEqual("win", RPS.ScoreGame(p, s));
 
-        Assert.AreEqual("tie", RockPaperScissors.ScoreGame(s, s));
-        Assert.AreEqual("lose", RockPaperScissors.ScoreGame(s, p));
-        Assert.AreEqual("win", RockPaperScissors.ScoreGame(s, r));
+        Assert.AreEqual("tie", RPS.ScoreGame(s, s));
+        Assert.AreEqual("lose", RPS.ScoreGame(s, p));
+        Assert.AreEqual("win", RPS.ScoreGame(s, r));
     }
 }
