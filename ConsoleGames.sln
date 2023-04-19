@@ -2,13 +2,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scrabble", "Scrabble\Scrabble.csproj", "{B2F535A5-E015-4450-8874-BEE7E0140085}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scrabble", "src\Scrabble\Scrabble.csproj", "{B2F535A5-E015-4450-8874-BEE7E0140085}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.csproj", "{A3DA92BE-7A7C-478A-AEF1-2C62BF604F07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockPaperScissors", "src\RockPaperScissors\RockPaperScissors.csproj", "{A3DA92BE-7A7C-478A-AEF1-2C62BF604F07}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayGames", "PlayGames\PlayGames.csproj", "{FB250216-2533-48B6-88B7-654EF2ACA3B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayGames", "src\PlayGames\PlayGames.csproj", "{FB250216-2533-48B6-88B7-654EF2ACA3B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scrabble.Tests", "Scrabble.Tests\Scrabble.Tests.csproj", "{235EEA96-F6B8-4AB0-8F15-03333D9DF9F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scrabble.Tests", "tests\Scrabble.Tests\Scrabble.Tests.csproj", "{235EEA96-F6B8-4AB0-8F15-03333D9DF9F1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{10A2494E-64AF-42FB-9A3E-2B9F92D78BE9}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissors.Tests", "RockPaperScissors.Tests\RockPaperScissors.Tests.csproj", "{61D08E4A-18B1-4DB6-B352-470AF4B3907F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissors.Tests", "tests\RockPaperScissors.Tests\RockPaperScissors.Tests.csproj", "{61D08E4A-18B1-4DB6-B352-470AF4B3907F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A6981F8D-00F0-49F2-BE3E-C63E9B93D8CA}"
 EndProject
